@@ -6,3 +6,8 @@ Please go through the below points that how i have implemented the problem state
     framework with TestNG and Hybrid-driven testing approach.
 
 3.  The project is developed as Maven Project.
+
+4.  For reporting purpose, Extent Reports functionality is used.
+
+Note : In addition to above points, i can build this framework in BDD using cucumber, add log4j dependency, take screenshot as 
+ multiple checkpoints, use github and Jenkins for source control and CICD pipline etc.

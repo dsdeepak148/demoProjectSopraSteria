@@ -19,11 +19,11 @@ public class TestBase {
 	public static Properties prop;
 
 	public TestBase() {
-
+		
 		prop = new Properties();
 		try {
 			FileInputStream fip = new FileInputStream(
-					"/Users/deepaksingh/eclipse-workspace/demoProjectSopraSteria/src/main/java/com/demoproject/config/config.properties");
+				System.getProperty("user.dir") + "/src/main/java/com/demoproject/config/config.properties");
 			try {
 				prop.load(fip);
 			} catch (IOException e) {
@@ -39,8 +39,8 @@ public class TestBase {
 
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"/Users/deepaksingh/eclipse-workspace/demoProjectSopraSteria/Drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver", 
+					System.getProperty("user.dir")+ "/Drivers/chromedriver");
 			driver = new ChromeDriver();
 		} else if (browserName.equals("Firefox")) {
 			System.setProperty("webdriver.gecko.driver",
