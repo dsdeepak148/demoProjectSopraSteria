@@ -44,12 +44,12 @@ public class TestBase {
 			driver = new ChromeDriver();
 		} else if (browserName.equals("Firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"/Users/deepaksingh/eclipse-workspace/demoProjectSopraSteria/Drivers/geckodriver");
+					System.getProperty("user.dir")+ "/Drivers/geckodriver");
 			driver = new FirefoxDriver();
 
 		} else if (browserName.equals("MS Edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"/Users/deepaksingh/eclipse-workspace/demoProjectSopraSteria/Drivers/msedgedriver");
+					System.getProperty("user.dir")+ "/Drivers/msedgedriver");
 			driver = new EdgeDriver();
 
 		}
